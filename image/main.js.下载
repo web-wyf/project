@@ -1,0 +1,317 @@
+var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated',
+    offset: 200,
+    mobile: false,
+    live: true
+});
+wow.init();
+
+
+// 终端判断
+var os = function() {
+    var ua = navigator.userAgent,
+        isWindowsPhone = /(?:Windows Phone)/.test(ua),
+        isSymbian = /(?:SymbianOS)/.test(ua) || isWindowsPhone,
+        isAndroid = /(?:Android)/.test(ua),
+        isFireFox = /(?:Firefox)/.test(ua),
+        isChrome = /(?:Chrome|CriOS)/.test(ua),
+        isTablet = /(?:iPad|PlayBook)/.test(ua) || (isAndroid && !/(?:Mobile)/.test(ua)) || (isFireFox && /(?:Tablet)/.test(ua)),
+        isPhone = /(?:iPhone)/.test(ua) && !isTablet,
+        isPc = !isPhone && !isAndroid && !isSymbian;
+    return {
+        isTablet: isTablet,
+        isPhone: isPhone,
+        isAndroid: isAndroid,
+        isPc: isPc
+    };
+}();
+
+$(function() {
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 0) {
+            $("header").addClass('fixed');
+
+        } else {
+            $("header").removeClass('fixed');
+        }
+    })
+
+    $(".mobile_back").on("click", function() {
+        window.history.back(-1);
+
+    })
+    var time = "";
+    $("header nav li").hover(function(ev) {
+        clearTimeout(time);
+        var _this = $(this);
+        var _index = _this.index(".hassubnav");
+        _this.addClass('on').siblings().removeClass('on');
+        $("header .nav-select.on").removeClass('on');
+        _this.find('.nav-select').addClass('on');
+    }, function(ev) {
+        clearTimeout(time);
+        time = setTimeout(function() {
+            $("header .nav-select.on").removeClass('on');
+        }, 100)
+    })
+
+    // $('.head-left .ser').on('click', function() {
+    //     $('.search-alert').addClass('active');
+    // })
+    // $('.search-alert .close').on('click', function() {
+    //     $('.search-alert').removeClass('active');
+    // })
+    $(".l-toggle").on('click', function() {
+        var _this = $(this);
+        if (!$(this).hasClass('hover')) {
+            $(this).addClass('hover');
+            $("header .menu .lbox .line1").animate({
+                "top": '50%'
+            }, 200, function() {
+                $("header .menu .lbox .line2").hide();
+            }).animate({
+                'rotate': '45deg'
+            })
+            $("header .menu .lbox .line3").animate({
+                "top": '50%'
+            }, 200, function() {
+                $("header .menu .lbox .line2").hide();
+            }).animate({
+                'rotate': '-45deg'
+            })
+            $('.sub-menu').stop().fadeIn();
+            $(".mobile-nav .js-m-header").addClass("animate");
+            $("body,html").stop(true, true).addClass('ovh');
+            $('.js-m-2').each(function() {
+                var _this = $(this);
+                if (_this.offset().top > $(window).scrollTop() + $(window).height() || _this.offset().top < $(window).scrollTop() - _this.outerHeight()) {} else if ($(window).scrollTop() > _this.offset().top - $(window).height() * 0.9) {
+                    setTimeout(function() {
+                        _this.addClass('animate');
+                    }, 500)
+
+                }
+            });
+        } else {
+            $(this).removeClass('hover');
+            $(this).removeClass('active');
+            $("header .menu .lbox .line1").animate({
+                'rotate': '0deg'
+            }, 200, function() {
+                $("header .menu .lbox .line2").show();
+            }).animate({
+                "top": '0%'
+            }, 200)
+            $("header .menu .lbox .line3").animate({
+                'rotate': '0deg'
+            }, 200, function() {
+                $("header .menu .lbox .line2").show();
+            }).animate({
+                "top": '100%'
+            }, 200)
+            $('.sub-menu').stop().fadeOut();
+            $(".mobile-nav .js-m-header").removeClass("animate");
+            $("body,html").stop(true, true).removeClass('ovh');
+            $('.js-m-2').each(function() {
+                var _this = $(this);
+                _this.removeClass('animate');
+            });
+        }
+    });
+
+    $(".m-search").on('click', function() {
+        var _this = $(this);
+
+        // if (!$(this).hasClass('hover')) {
+        //     $(this).addClass('hover');
+
+        $('.mobile_search').stop().fadeIn();
+        $(".mobile_search .js-m-header").addClass("animate");
+        $("body,html").stop(true, true).addClass('ovh');
+        $('.js-m-2').each(function() {
+            var _this = $(this);
+            if (_this.offset().top > $(window).scrollTop() + $(window).height() || _this.offset().top < $(window).scrollTop() - _this.outerHeight()) {} else if ($(window).scrollTop() > _this.offset().top - $(window).height() * 0.9) {
+                setTimeout(function() {
+                    _this.addClass('animate');
+                }, 500)
+
+            }
+        });
+        $('.l-toggle').hide();
+        $('.m-back').show();
+        $(".m-search").hide();
+        $('.search-btn').show();
+        $('.header-top .logo').hide();
+        $('.mhead-input').show();
+        $('.mobile_back').hide();
+
+        // } else {
+        //     $(".m-search").removeClass('hover');
+        //     $(".m-search").removeClass('active');
+
+        //     $('.mobile_search').stop().fadeOut();
+        //     $(".mobile_search .js-m-header").removeClass("animate");
+        //     $("body,html").stop(true, true).removeClass('ovh');
+        //     $('.js-m-2').each(function() {
+        //         var _this = $(this);
+        //         _this.removeClass('animate');
+        //     });
+        //      $('.l-toggle').show();
+        // }
+    });
+    $(".m-back").on("click", function() {
+        $(".m-back").hide();
+        $('.mobile_search').stop().fadeOut();
+        $(".mobile_search .js-m-header").removeClass("animate");
+        $("body,html").stop(true, true).removeClass('ovh');
+        $('.js-m-2').each(function() {
+            var _this = $(this);
+            _this.removeClass('animate');
+        });
+        $('.l-toggle').show();
+        $(".m-search").show();
+        $('.search-btn').hide();
+        $('.header-top .logo').show();
+        $('.mhead-input').hide();
+        $('.mobile_back').show();
+    })
+
+    //竖直切换
+    $(function() {
+        window.onload = function() {
+            var $li = $('.sy li');
+            var $ul = $('.content .by');
+            $li.click(function() {
+                var $this = $(this);
+                var $t = $this.index();
+                $li.removeClass();
+                $this.addClass('current');
+                $ul.css('display', 'none');
+                $ul.eq($t).css('display', 'block');
+            })
+        }
+    });
+    $(".sub-menu .sub-tit").on('click', function() {
+        if ($(this).siblings('.sec-list').is(':hidden')) {
+            $(this).addClass('on');
+            $(this).siblings('.sec-list').stop().slideDown();
+            $(this).parent().siblings('li').children('.sec-list').stop().slideUp().siblings('.tit').removeClass('on');
+        } else {
+            $(this).removeClass('on');
+            $(this).siblings('.sec-list').stop().slideUp();
+        }
+    });
+    $('.pro_lists ul li').hover(function() {
+        $('.mark', this).fadeIn();
+    }, function() {
+        $('.mark', this).fadeOut();
+    });
+    $('.pro').hover(function() {
+        $('.mark', this).fadeIn();
+    }, function() {
+        $('.mark', this).fadeOut();
+    });
+    var swiper = new Swiper('.banner-slide', {
+        spaceBetween: 30,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+var galleryThumbs = new Swiper('.gallery-thumbs', {
+    spaceBetween: 10,
+    slidesPerView: 3,
+    loop: true,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: 'vertical',
+  });
+  var galleryTop = new Swiper('.gallery-top', {
+    spaceBetween: 10,
+    loop: true,
+    loopedSlides: 5, //looped slides should be the same
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: galleryThumbs,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+    var searchBox = $('#search-btn').searchMeme({
+        onSearch: function(searchText) {
+
+                setTimeout(function() {
+
+                    searchBox.searchMeme({
+                        searchComplete: true
+                    });
+                    console.log('搜索val', searchBox.val())
+                }, 100);
+
+            }
+
+            ,
+        buttonPlacement: 'left',
+        button: 's'
+
+    });
+
+
+
+    $(".select").each(function() {
+        var s = $(this);
+        var z = parseInt(s.css("z-index"));
+        var dt = $(this).children("dt");
+        var dd = $(this).children("dd");
+        var _show = function() {
+            dd.slideDown(200);
+            dt.addClass("cur");
+            s.css("z-index", z + 1);
+        }; //展开效果
+        var _hide = function() {
+            dd.slideUp(200);
+            dt.removeClass("cur");
+            s.css("z-index", z);
+        }; //关闭效果
+
+        s.hover(function() {
+            _show()
+        }, function() {
+            _hide()
+        });
+        dd.hover(function() {
+            _show()
+
+        }, function() {
+            _hide()
+        });
+        dd.find("a").click(function() {
+            dt.html($(this).html());
+            _hide();
+			searchProduct();
+        }); //选择效果（如需要传值，可自定义参数，在此处返回对应的“value”值 ）
+        $("body").click(function(i) {
+            !$(i.target).parents(".select").first().is(s) ? _hide() : "";
+        });
+    })
+
+
+});

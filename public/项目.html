@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link href="../css/bootstrap.css" rel="stylesheet">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <title>品牌故事 - 金奉祥珠宝官网 - 珠宝新生代</title>
+  <link rel="stylesheet" href="../css/newheader.css">
+  <style>
+    .tab-content>.active {
+      display: flex;
+    }
+
+    .list-group-item {
+      border: none;
+
+    }
+
+    .list-group-item a {
+      color: #333;
+      font: 1rem "微软雅黑"
+    }
+
+    .carousel-indicators li {
+      width: 40px;
+      height: 4px;
+      background-color: rgba(9, 9, 9, 0.1);
+      margin-left: 6px;
+      margin-right: 6px;
+      /* border-radius: 50%; */
+    }
+
+    .carousel-indicators .active {
+      background-color: orange;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 4%;
+      height: 20%;
+      background-color: rgba(9, 9, 9, 0.1);
+      top: 40%;
+      border-radius: 0.25rem;
+    }
+
+    .border-bottom-orange {
+      border-bottom: 1px solid orange
+    }
+
+    .container-fluid {
+      padding: 0px;
+    }
+
+    .gouzi {
+      margin-left: 0px;
+    }
+
+    .f1-right {
+      width: 300px;
+      height: 300px;
+    }
+
+    .f1-right img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .f2 {
+      position: relative;
+    }
+
+    .position-absolute {
+      top: 43%;
+      left: 16%;
+    }
+
+    @keyframes rubberBand {
+      from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+
+      30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+      }
+
+      40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+      }
+
+      50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+      }
+
+      65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+      }
+
+      75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+      }
+
+      to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+
+    .abtn {
+      display: block;
+      width: 10rem;
+      height: 3rem;
+      border: 1px solid #333;
+      line-height: 3rem;
+      text-align: center;
+      list-style: none;
+      color: #333;
+      transition: all 0.1s;
+      margin: auto;
+    }
+
+
+
+    @keyframes anim-out {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+
+    .abtn:hover {
+
+      box-shadow: 0px 1px 1px #063e6b;
+      animation: rubberBand 0.5s;
+      text-decoration: none
+    }
+
+    a.imgscla img:hover {
+      transition: 10px 1s linear 2s;
+    }
+
+    [class="col-md-6 col-sm-12 f1-right"]:hover {
+      transform: scale(1.05);
+      border: 0.5px solid #063e6b;
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 0px 5px 0px;
+      transition: all .4s ;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row mt-4 text-center">
+      <div class="col-lg-4 f1-left m-auto ">
+        <img src="../image/icon_location.png" alt="">
+        <span>成都</span>
+        <input type="search" class="input_img">
+      </div>
+      <div class="col-lg-4 col-12 m-auto">
+        <img src="../image/logo.png" alt="" class="w-75">
+      </div>
+      <div class="col-lg-4 f1-left m-auto">
+        <img src="../image/icon_tel.png" alt="">
+        <span>400-9999-213</span>
+        <img src="../image/icon_service.png" alt="" class="ml-5">
+        <span>在线客服</span>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white ">
+
+      <img src="../image/logo.png" alt="" class="w-25 logo1">
+      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto m-auto">
+          <li class="nav-item ml-5">
+            <a class="nav-link " data-toggle="tab" href="#d1">首页</a>
+          </li>
+          <li class="nav-item ml-5">
+            <a class="nav-link " data-toggle="tab" href="#d1">珠宝系列</a>
+          </li>
+
+          <li class="nav-item ml-5">
+            <a class="nav-link" data-toggle="tab" href="#d2">婚礼系列</a>
+          </li>
+
+          <li class="nav-item ml-5">
+            <a class="nav-link" data-toggle="tab" href="#d3">礼物</a>
+          </li>
+
+          <li class="nav-item ml-5">
+            <a class="nav-link" data-toggle="tab" href="#d4">金奉祥品牌</a>
+          </li>
+
+          <li class="nav-item ml-5">
+            <a class="nav-link" href="#d6 " data-toggle="tab">全球裸钻</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+  <div id="demo" class="carousel " data-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../image/20181126142253173.jpg" alt="" class="w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="../image/20181126151703103.jpg" alt="" class="w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="../image/20181127201357128.jpg" alt="" class="w-100">
+      </div>
+    </div>
+
+    <a href="#demo" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+    <a href="#demo" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+    <ul class="carousel-indicators">
+      <li data-slide-to="0" data-target="#demo" class="active"></li>
+      <li data-slide-to="1" data-target="#demo"></li>
+      <li data-slide-to="2" data-target="#demo"></li>
+    </ul>
+  </div>
+  <div class="text-center">
+    <img class="" src="../image/sec1_title.png" alt="">
+    <p>SUPERLOVE/超级爱情相信，如果我们每一个人都能珍惜爱情，珍惜彼此，世界将会变得更美好。</p>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-5 col-md-12 text-center">
+        <img class="img-fluid" src="../image/super_img1.png" alt="">
+        <p>SUPERLOVE/超级爱情</p>
+        <p>爱一生，不止一生</p>
+        <a href="javascript:;" class="abtn">
+          浏览此系列
+        </a>
+      </div>
+      <div class="col-lg-7 col-md-12">
+        <div class="row">
+          <div class="col-md-6 col-sm-12 f1-right"><a href="javascript:;" class="imgscale"> <img class="w-75"
+                src="../image/20181214164728120.png" alt=""></a></div>
+          <div class="col-md-6 col-sm-12 f1-right"><a href="javascript:;" class="imgscale"> <img class="w-75"
+                src="../image/20181212140436102.png" alt=""></a></div>
+          <div class="col-md-6 col-sm-12 f1-right"><a href="javascript:;" class="imgscale"> <img class="w-75"
+                src="../image/20181214170205113.png" alt=""></a></div>
+          <div class="col-md-6 col-sm-12 f1-right"><a href="javascript:;" class="imgscale"> <img class="w-75"
+                src="../image/20181214170455139.png" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid f2">
+
+    <div class="position-absolute text-center">
+      <p>时间是一个圆，爱你是一个圆，我将爱你的符号都印刻在上面。 </p>
+      <p>Time is a circle,Love is a circle, I'll print my lovesymbols on it.</p>
+      <a href="" class="abtn">浏览此系列</a>
+    </div>
+    <img src="../image/circles_bg.png" alt="">
+  </div>
+
+</body>
+
+</html>

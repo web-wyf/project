@@ -1,0 +1,27 @@
+@media screen and (max-width:991px) {
+
+  [class="row mt-4 text-center"] {
+    display: none;
+  }
+
+  /* .w-100{
+    width: 40% !important;
+  } */
+
+}
+
+@media screen and (min-width:991px) {
+  .logo1 {
+    display: none;
+    margin-left: 0px;
+  }
+}
+
+.input_img {
+  background: url(../image/icon_search.png) no-repeat 95% center;
+  background-size: 10%;
+  border-radius: 1rem;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.1)
+}

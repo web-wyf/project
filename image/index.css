@@ -1,0 +1,491 @@
+/* section*/
+.sec {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.sec1 {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.sec2 {
+    width: 100%;
+}
+
+.sec3 {
+    width: 100%;
+}
+
+.sec4 {
+    width: 100%;
+    position: relative;
+}
+
+.sec1 .tit {
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sec1 .tit img {
+    width: 257px;
+    height: 85px;
+}
+
+.sec1 .tit p {
+    padding-top: 20px;
+}
+
+
+
+.sec1-left {
+    width: 40%;
+}
+
+.sec1-right {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.sec1-left .pro {
+    width: 500px;
+    height: 500px;
+    margin: 25px auto;
+    overflow: hidden;
+}
+
+.sec1-left .pro img {
+    width: 100%;
+    height: auto;
+}
+
+.sec1-left .text {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+}
+
+.sec1-left .text p {
+    padding: 10px 0;
+}
+
+.sec1-left .des {
+    font-size: 30px;
+}
+
+.sec1-left a.btn {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #7d7d7d;
+    color: #333;
+}
+
+.sec1-right .pro {
+    width: 300px;
+    height: 300px;
+    margin: 25px;
+    overflow: hidden;
+}
+
+.sec1-right .pro img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.sec2-top {
+    width: 100%;
+    position: relative;
+}
+
+.sec2-top img {
+    width: 100%;
+    height: auto;
+}
+
+.sec2-top .text {
+    width: 30%;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    left: 15%;
+    top: 44%;
+}
+
+.sec2-top .text p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    /* margin-bottom: 20px;*/
+}
+
+.sec2-top a.btn {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #7d7d7d;
+    color: #333;
+}
+
+.sec2-bottom {
+
+    display: flex;
+    padding: 50px 0;
+}
+
+.sec2-bottom .pro {
+    margin: 25px;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.sec2-bottom .pro img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.sec3-top {
+    width: 100%;
+    position: relative;
+}
+
+.sec3-top img {
+    width: 100%;
+    height: auto;
+}
+
+.sec3-top .text {
+    font-size: 26px;
+    color: #fff;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+
+.sec3-top .tit {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.sec3-top .text p {
+
+    /*  margin-bottom: 10px;*/
+}
+
+.sec3-top a.btn {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.sec3-bottom {
+
+    display: flex;
+    padding: 50px 0;
+}
+
+.sec3-bottom .pro {
+    margin: 20px;
+    width: 310px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.sec3-bottom .pro img {
+    width: 100%;
+    height: auto;
+}
+
+
+.sec4 img {
+    width: 100%;
+    height: auto;
+}
+
+.sec4 .text {
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    right: 15%;
+    top: 15%;
+    text-align: right;
+    width: 50%;
+
+}
+
+.sec4 a.btn {
+    width: 200px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #7d7d7d;
+    color: #333;
+}
+
+.sec4 .tit {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.sec4 .tit2 {
+    font-size: 30px;
+}
+
+.sec4 .des {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.sec a.btn {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .sec1-left .pro {
+        width: 400px;
+        height: 400px;
+        margin: 25px auto;
+    }
+
+    .sec1-right .pro {
+        width: 250px;
+        height: 250px;
+        margin: 20px;
+        overflow: hidden;
+    }
+
+    .sec2-bottom .pro,
+    .sec3-bottom .pro {
+        width: 258px;
+        height: 258px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .sec1-left .pro {
+        width: 350px;
+        height: 350px;
+        margin: 25px auto;
+    }
+
+    .sec1-right .pro {
+        width: 180px;
+        height: 180px;
+        margin: 15px;
+        overflow: hidden;
+    }
+
+    .sec2-bottom .pro,
+    .sec3-bottom .pro {
+        width: 205px;
+        height: 205px;
+    }
+
+}
+
+@media screen and (max-width: 993px) {
+    .sec1-left .pro {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .sec1-right .pro {
+        width: 180px;
+        height: 180px;
+        margin: 15px;
+        overflow: hidden;
+    }
+
+
+    .sec2-bottom .pro,
+    .sec3-bottom .pro {
+        width: 149px;
+        height: 149px;
+    }
+
+    .sec4 .tit {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .sec1 {
+        padding: 0.2rem 0;
+    }
+
+    .sec1 .tit {
+        font-size: 0.2rem;
+        text-align: center;
+        padding: 0.2rem 0;
+    }
+
+    .sec1 .tit img {
+        width: 2rem;
+        height: auto;
+    }
+
+    .sec1 .tit p {
+        padding: 0.2rem;
+    }
+
+    .sec1-left {
+        width: 80%;
+        margin: 0.2rem 10%;
+        padding: 0.3rem 0;
+    }
+
+    .sec1-right {
+        width: 100%;
+    }
+
+    .sec1-left .pro {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto;
+    }
+
+    .sec1-left .text p {
+        padding: 0.1rem 0;
+    }
+
+    .sec1-left .text {
+        font-size: 0.2rem;
+        line-height: 0.4rem
+    }
+
+    .sec1-left .des {
+        font-size: 0.3rem !important;
+    }
+
+    .sec1-left a.btn {
+        width: 2.4rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.14rem;
+    }
+
+    .sec1-right .pro {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.2rem;
+        overflow: hidden;
+    }
+
+    .sec2-bottom,
+    .sec3-bottom {
+
+
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sec2-bottom .pro,
+    .sec3-bottom .pro {
+        width: 3rem;
+        height: 3rem;
+        margin: 0.2rem;
+        overflow: hidden;
+    }
+
+    .sec2-top .text {
+
+        font-size: 0.12rem;
+        color: #333;
+        position: absolute;
+        left: 13%;
+        top: 44%;
+    }
+
+    .sec2-top .text p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+
+    }
+
+    .sec2-top a.btn {
+        width: 2.4rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.14rem;
+    }
+
+    .sec3-top .text {
+        font-size: 0.12rem;
+        left: 13%;
+        top: 15%;
+    }
+
+    .sec3-top .tit {
+        font-size: 0.36rem;
+    }
+
+    .sec3-top a.btn {
+        width: 2.4rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.14rem;
+    }
+
+    .sec4 .tit {
+        font-size: 0.28rem;
+        font-weight: bold;
+    }
+
+    .sec4 .tit2 {
+        font-size: 0.18rem;
+    }
+
+    .sec4 .text {
+        font-size: 0.12rem;
+    }
+
+    .sec4 .des {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .sec4 a.btn {
+        width: 2.4rem;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.14rem;
+    }
+
+    .sec a.btn {
+        margin-top: 0.3rem;
+    }
+
+
+}
